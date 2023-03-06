@@ -1,6 +1,10 @@
-# Current challenge:
+# About 
 
-![image](https://user-images.githubusercontent.com/75015574/223013095-c3d1be87-8304-414f-a4f5-fca9ef434923.png)
+Created a form in React using useState, useRef and FormData. No additional libraries.
+
+# Preview:
+
+![image](https://user-images.githubusercontent.com/75015574/223223141-6aedbc2b-490f-40e7-a7d9-77ecc9d36327.png)
 
 #Deployed website
 
