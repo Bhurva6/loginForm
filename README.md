@@ -8,7 +8,7 @@ https://login-form-vrf3.vercel.app/
 
 # Preview:
 
-![image](https://user-images.githubusercontent.com/75015574/223223141-6aedbc2b-490f-40e7-a7d9-77ecc9d36327.png)
+![image](https://user-images.githubusercontent.com/75015574/226665386-2918896e-dfc7-4bba-98b8-c48a224decb9.png)
 
 # Getting Started with Create React App
 
