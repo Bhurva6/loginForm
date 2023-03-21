@@ -3,24 +3,67 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.3)
-    ),
+  background: 
     url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-  background-size: cover;
+  background-size: flex;
   background-position: center;
 }
+
+
 
 form{
     background-color: white;
     padding: 0px 60px;
     border-radius: 10px;
+    
 }
 
 h1{
-    color: rgb(77, 1, 77);
-    text-align: center;
+    color: black;
+    text-align: left;
+}
+
+button{
+
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: 
+    url("https://images.unsplash.com/photo-1638184984605-af1f05249a56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  src: ("https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+}
+
+form{
+    background-color: white;
+    padding: 10px 60px;
+    border-radius: 10px;
+    
+}
+
+h1{
+    color: black;
+    text-align: left;
 }
 
 button{
@@ -28,7 +71,7 @@ button{
     height: 50px;
     padding: 10px;
     border: none;
-    background-color: rebeccapurple;
+    background-color: black;
     color: white;
     border-radius: 5px;
     font-weight: bold;
@@ -37,3 +80,4 @@ button{
     margin-top: 15px;
     margin-bottom: 30px;
 }
+
