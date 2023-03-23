@@ -1,10 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 import FormInput from "./components/FormInput";
+import FormDropdown  from "./components/FormDropdown";
+import { useHistory } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 
 
 const App = () => {
+  const history = useHistory();
   const [values, setValues] = useState({
     username: "",
     role:"",
@@ -15,6 +20,10 @@ const App = () => {
   });
 
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    history.push("/");
+  };
 
   const inputs = [
     {
@@ -32,7 +41,7 @@ const App = () => {
 
     {
       id: 2,
-      type: FormDropdown,
+      type: String,
       placeholder: "Role",
       label: "Role",
       required: true,
@@ -82,32 +91,6 @@ const App = () => {
   ];
 
 
-  function FormDropdown(){
-    const [selectedOption, setSelectedOption] = useState('Option 1');
-
-    const handleOptionChange = (event) => {
-      setSelectedOption(event.target.value);
-    };
-
-    return (
-    <form>
-      <label htmlFor="dropdown"> Define Role: </label>
-      <select id="dropdown" value={selectedOption} onChange = {handleOptionChange} >
-        <option value="Student"> Student </option>
-        <option value="User"> User </option>
-        <option value="Admin"> Admin </option>
-      </select>
-    </form>
-    );
-  }
-
-
-
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
 
   const onChange = (e) => {
@@ -115,23 +98,39 @@ const App = () => {
   };
 
   return (
+    
+               
     <div className="app">
       <form onSubmit={handleSubmit}>
         <h1>Register</h1>
-        {inputs.map((input) => (
-          <FormInput
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <button>Submit</button>
-        <p>If you already have an account <a href='src\components\LoginForm.jsx'>Login Here</a></p>
+        {inputs.map((input) => {
+          if (input.type === "dropdown"){
+            return <FormDropdown />;
+          }
+          else{
+            return (
+              <FormInput
+              key={input.id}
+              {...input}
+              value = {values[input.name]}
+              onChange={onChange}
+            />
+            );
+            }
+          })}
+          <button type="submit">Submit</button>
+        <p>If you already have an account <a href>Login Here</a></p>
       </form>
     </div>
+
+     
+   
+
+   
+    
   );
 };
+
 
 
 
